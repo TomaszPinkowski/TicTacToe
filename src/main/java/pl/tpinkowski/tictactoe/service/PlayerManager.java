@@ -1,5 +1,6 @@
-package pl.tpinkowski.tictactoe;
+package pl.tpinkowski.tictactoe.service;
 
+import pl.tpinkowski.tictactoe.Services;
 import pl.tpinkowski.tictactoe.interaction.UserContactInterface;
 import pl.tpinkowski.tictactoe.model.Game;
 import pl.tpinkowski.tictactoe.model.Player;
@@ -25,7 +26,7 @@ public class PlayerManager {
     }
 
     private Player initializePlayer(String description) {
-        String playerName = userContactInterface.ask(String.format("Write player %s name: ", description));
+        String playerName = userContactInterface.ask(String.format("Write name of %s player: ", description));
         PlayerSide playerSide = askPLayerSide(description);
         return new Player(playerName, playerSide);
     }

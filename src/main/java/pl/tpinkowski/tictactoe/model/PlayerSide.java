@@ -1,6 +1,12 @@
 package pl.tpinkowski.tictactoe.model;
 
 public enum PlayerSide {
-    CROSS,
-    NOUGHT
+    CROSS(FieldState.CROSS),
+    NOUGHT(FieldState.NOUGHT);
+
+    public FieldState fieldStateToMark;
+
+    PlayerSide(FieldState fieldState) {
+        this.fieldStateToMark = fieldState;
+    }
 }
