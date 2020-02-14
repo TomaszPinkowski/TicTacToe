@@ -11,8 +11,10 @@ public class GameService {
             case BEFORE_START:
             case PLAYER1_MOVE:
                 nextMove(game, game.getPlayer1());
+                break;
             case PLAYER2_MOVE:
                 nextMove(game, game.getPlayer2());
+                break;
         }
     }
 
@@ -53,8 +55,7 @@ public class GameService {
             } else {
                 if (game.getGameState() == PLAYER1_MOVE || game.getGameState() == BEFORE_START) {
                     game.setGameState(PLAYER2_MOVE);
-                }
-                if (game.getGameState() == PLAYER2_MOVE) {
+                } else if (game.getGameState() == PLAYER2_MOVE) {
                     game.setGameState(PLAYER1_MOVE);
                 }
             }

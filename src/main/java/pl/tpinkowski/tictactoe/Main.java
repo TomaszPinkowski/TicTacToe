@@ -7,7 +7,6 @@ import static pl.tpinkowski.tictactoe.Services.*;
 public class Main {
     public static void main(String[] args) {
 
-
         Game game = new Game();
 
         playerManager.initializePlayers(game);
