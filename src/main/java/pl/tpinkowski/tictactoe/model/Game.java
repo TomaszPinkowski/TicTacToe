@@ -5,9 +5,14 @@ public class Game {
     private Player player2;
 
     private GameState gameState;
+    private Board board = new Board();
 
     public Game() {
         gameState = GameState.BEFORE_START;
+    }
+
+    public Board getBoard() {
+        return board;
     }
 
     public Player getPlayer1() {
